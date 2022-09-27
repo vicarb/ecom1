@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Navbar } from '../components/Navbar'
 import { Nav } from '../components/Nav'
 import { Menu } from '../components/Menu'
-import { Footer } from '../components/Footer'
+import Footer from '../components/Footer'
 function MyApp({ Component, pageProps, router }) {
   return (
   <>

@@ -30,7 +30,7 @@ export const getStaticPaths = async () => {
       })
       return {
           paths,
-          fallback: false,
+          fallback: 'blocking',
       }
 }
 
@@ -46,7 +46,8 @@ export const getStaticProps = async (context) => {
         props: {
             producto: data,
             // producto_img: data_img
-        }
+        },
+        revalidate: 30
     }
 }
 const SingleNegocioPage = ({ producto, producto_img }) => {
