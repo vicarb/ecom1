@@ -5,13 +5,17 @@ import { Landing } from '../components/Landing'
 
 export default function Home({productos}) {
   return (
-    <div className>
+    <>
+    <Head>
+    <title>Chillin | Lentes de Sol</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
       <Landing productos={productos}/>
-    </div>
+    </>
   )
 }
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const response = await fetch('https://crypton.cl/api/productos')
   const data = await response.json()
   console.log("Data from ServerSide props", response);

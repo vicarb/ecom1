@@ -4,6 +4,7 @@ import { ContactData } from '../../components/ContactData';
 import CartContext from '../../context/CartContext';
 import React from 'react';
 import Swipe from '../../components/Swipe';
+import Head from 'next/head';
 
 // swiper
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -64,6 +65,9 @@ const SingleNegocioPage = ({ producto, producto_img }) => {
   }
     return(
     <>
+    <Head>
+        <title>{producto.name} | chillin.cl</title> 
+    </Head>
     <section className="text-gray-700 body-font overflow-hidden bg-white">
   <div className="container px-5 pt-12 pb-24 mx-auto">
     
