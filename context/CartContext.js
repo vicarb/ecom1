@@ -6,7 +6,7 @@ export function CartProvider({children}){
     //main payload
     const [items, setItems] = useState([]);
     const [id, setId] = useState()
-
+    const [pending, setPending] = useState(false)
     // quantity of payload.price
     const [quantity, setQuantity] = useState(1)
 
@@ -74,7 +74,9 @@ export function CartProvider({children}){
     }
 
     //Increase from cart 
-    const handleCartInc = (item, quantity) => {
+    const handleCartInc = (item) => {
+
+
         if (item.quantity > 0){
             console.log("hello cart");
         item.quantity++
@@ -83,10 +85,12 @@ export function CartProvider({children}){
         } else {
             setQuanty(1)
         }
+        
     }
     
     //Increase from cart 
     const handleCartDec = (item, quantity) => {
+        setPending(true)
         if (item.quantity > 1){
             console.log("hello cart");
         item.quantity--
@@ -98,7 +102,7 @@ export function CartProvider({children}){
     }
 
     return (
-        <CartContext.Provider value={{ removeHandler, quanty, setQuanty, handleCartDec, handleCartInc,items, addToCart, quantity, setQuantity, sumArr, handleDecrement, handleIncrement, clicked, setClicked, id, setId}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{ pending, setPending, removeHandler, quanty, setQuanty, handleCartDec, handleCartInc,items, addToCart, quantity, setQuantity, sumArr, handleDecrement, handleIncrement, clicked, setClicked, id, setId}}>{children}</CartContext.Provider>
     )
 }
 export default CartContext;

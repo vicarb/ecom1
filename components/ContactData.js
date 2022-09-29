@@ -35,7 +35,7 @@ export const ContactData = () => {
   }
   return (
     <>
-    <motion.div className="container" initial='first' animate='last' variants={{
+    <motion.div className="container bg-sky-200" initial='first' animate='last' variants={{
       first: {
         opacity:0
       },
@@ -48,7 +48,7 @@ export const ContactData = () => {
     }}>
     
     <h1 className="text-4xl text-gray-800 text-center font-bold mt-6 mb-10">Contacto</h1>
-    <div className="flex w-2/3 pb-10 pt-5 mx-auto rounded-lg justify-center bg-gray-500 p-12 mb-12">
+    <div className="flex w-2/3 pb-10 pt-5 mx-auto rounded-lg justify-center bg-amber-200 p-12 mb-12">
         
     <form onSubmit={handleSubmit}>
     <div className="mb-6">

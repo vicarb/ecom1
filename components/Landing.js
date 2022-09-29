@@ -30,10 +30,10 @@ export const Landing = ({productos}) => {
               opacity:1,
             }
           }}>
-          <div className="h-full flex-1 rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+          <div className="h-full flex-1 rounded-xl shadow-cla-blue bg-gradient-to-r from-sky-200 to-sky-300 overflow-hidden">
             
          <Link href="/detail/[id]" as={`/detail/${producto.id}`}>
-            <img className="lg:h-48 md:h-36 w-full object-cover object-center scale-90 transition-all duration-400 hover:scale-100" src={`https://crypton.cl${producto.image}`} alt="blog"/>
+            <img className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md mt-4 scale-90 transition-all duration-400 hover:scale-95 hover:cursor-pointer" src={`https://crypton.cl${producto.image}`} alt="blog"/>
             </Link>
             <div className="p-6">
               <h1 className="title-font text-lg font-medium text-gray-600 mb-3">{ producto.name }</h1>
