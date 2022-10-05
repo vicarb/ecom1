@@ -18,7 +18,7 @@ export const ContactData = () => {
       console.log(datos)
       setIsPending(true)
       axios
-        .post('https://www.chillin.cl/api/contact', datos)
+        .post('https://www.crypton.cl/api/contact', datos)
         .then((resp) => {
         console.log(resp);
         setIsPending(false)
