@@ -28,7 +28,7 @@ const Swipe = ({producto_img}) => {
       onSwiper={(swiper) => console.log(swiper)}
      
       onSlideChange={() => console.log('slide change')}
-      className='w-1/2 h-80'
+      className='lg:w-1/2 h-80 '
       breakpoints= {{
 
           // when window width is <= 499px
@@ -52,7 +52,7 @@ const Swipe = ({producto_img}) => {
         {producto_img.map((img) => {
             return(
                 <SwiperSlide key={img.id}>
-                <img key={img.id} alt="ecommerce" className="justify-center bg-slate-600 hover:bg-sky-700 hover:scale-105 transition-all  object-cover object-center rounded border border-gray-200" src={`http://127.0.0.1:8000${img.image}`} />
+                <img key={img.id} alt="ecommerce" className="w-full h-60 lg:justify-center bg-slate-600 hover:bg-sky-700 hover:scale-105 transition-all  object-cover object-center rounded border border-gray-200" src={`https://crypton.cl${img.image}`} />
               </SwiperSlide>
             )
         })}

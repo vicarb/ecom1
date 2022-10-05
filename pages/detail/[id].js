@@ -38,14 +38,14 @@ export const getStaticProps = async (context) => {
     const id = context.params.id;
     const res = await fetch('https://crypton.cl/api/productos/' + id);
     const data = await res.json()
-    // const res_image = await fetch('https://crypton.cl/api/productos-images/sorted/'+ id);
-    // const data_img = await res_image.json();
-    // console.log("This--->", data_img);
+    const res_image = await fetch('https://crypton.cl/api/productos-images/sorted/'+ id);
+    const data_img = await res_image.json();
+    console.log("This--->", data_img);
 
     return {
         props: {
             producto: data,
-            // producto_img: data_img
+            producto_img: data_img
         },
         revalidate: 30
     }
@@ -74,8 +74,8 @@ const SingleNegocioPage = ({ producto, producto_img }) => {
     
 
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-      <img alt="ecommerce" className="hover:scale-105 transition-all lg:w-1/2 w-full h-60 object-cover object-center rounded border border-gray-200" src={`https://crypton.cl${producto.image}`} />
-      {/* <Swipe producto_img={producto_img}/> */}
+      {/* <img alt="ecommerce" className="hover:scale-105 transition-all lg:w-1/2 w-full h-60 object-cover object-center rounded border border-gray-200" src={`https://crypton.cl${producto.image}`} /> */}
+      <Swipe producto_img={producto_img}/>
       
       <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
         <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{ producto.name }</h1>
@@ -143,6 +143,7 @@ const SingleNegocioPage = ({ producto, producto_img }) => {
       {/* <Swipe producto_img={producto_img}/> */}
       {/* <Cart carr={carr} setCarr={setCarr} /> */}
       {/* <Cart/> */}
+      
     </div>
     <ContactData/>
   </div>
