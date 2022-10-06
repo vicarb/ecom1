@@ -9,6 +9,7 @@ export default function Home({productos}) {
     <Head>
     <title>Chillin | Lentes de Sol</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="/sung1.ico" />
     </Head>
       <Landing productos={productos}/>
     </>

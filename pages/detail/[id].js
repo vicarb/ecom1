@@ -5,6 +5,7 @@ import CartContext from '../../context/CartContext';
 import React from 'react';
 import Swipe from '../../components/Swipe';
 import Head from 'next/head';
+import Image from 'next/image';
 
 // swiper
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -74,11 +75,14 @@ const SingleNegocioPage = ({ producto, producto_img }) => {
     
 
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-      {/* <img alt="ecommerce" className="hover:scale-105 transition-all lg:w-1/2 w-full h-60 object-cover object-center rounded border border-gray-200" src={`https://crypton.cl${producto.image}`} /> */}
+    {/* <div style={{width: '300px', height: '300px', position: 'relative'}}>
+      <Image layout='fill' alt="ecommerce" className="hover:scale-105 transition-all lg:w-1/2 w-full h-60 object-cover object-center rounded border border-gray-200" src={`https://crypton.cl${producto.image}`} />
+      </div> */}
+      
       <Swipe producto_img={producto_img}/>
       
       <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-        <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{ producto.name }</h1>
+        <h1 className="text-orange-400 text-3xl mb-1">{ producto.name }</h1>
         <div className="flex mb-4 ">
           <span className="flex items-center">
             <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-red-500" viewBox="0 0 24 24">

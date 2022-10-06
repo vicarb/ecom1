@@ -50,9 +50,9 @@ return (
       <Link href="/contacto">
         <a href="" onClick={() => setTurnonn(false)} className="cursor-pointer block py-4 pr-4 pl-3 text-black border-b  hover:border-black" aria-current="page">Contacto</a>
       </Link>
-      <Link href="/advertising">
+      {/* <Link href="/advertising">
         <a href="" onClick={() => setTurnonn(false)} className="cursor-pointer block py-4 pr-4 pl-3 text-black border-b  hover:border-black" aria-current="page">Digital Advertising</a>
-      </Link>
+      </Link> */}
       {/* <span>{state.pedido}</span> */}
       
       {/* <span className={`bg-emerald-600 ${ clicked ? 'hidden': ''}`} onClick ={() => {setClicked(!clicked)}}>
