@@ -52,7 +52,7 @@ const Swipe = ({producto_img}) => {
         {producto_img.map((img) => {
             return(
                 <SwiperSlide key={img.id} className='pb-12'>
-                <img loading="lazy" key={img.id} alt="ecommerce" className="w-full mt-6 h-60 lg:justify-center bg-slate-600 hover:bg-sky-700 hover:scale-105 transition-all  object-cover object-center rounded border border-gray-200" src={`https://crypton.cl${img.image}`} />
+                <img loading="lazy" key={img.id} alt="ecommerce" className="w-full mt-6 h-full scale-75 lg:justify-center bg-slate-600 hover:bg-sky-700  transition-all  object-cover object-center rounded border border-gray-200" src={`https://crypton.cl${img.image}`} />
               </SwiperSlide>
             )
         })}
